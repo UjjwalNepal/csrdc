@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+      var myCenter=new google.maps.LatLng(27.6844899,85.3353435);
+    function initialize(){
+    var mapProp = {
+      center:myCenter,
+      zoom:18,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+
+    var map=new google.maps.Map(document.getElementById("map"),mapProp);
+
+    var marker=new google.maps.Marker({
+      position:myCenter,
+      animation:google.maps.Animation.BOUNCE
+      });
+
+    marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+</head>
+<body>
+  <div id="contact" class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="section-title">Contact Us</h1>
+        </div> <!-- /.col-md-12 -->
+      </div> <!-- /.row -->
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 text-center bigger-text">
+          <p>Computer Science Research and Development Center is located at Sankhamool - 34, Kathmandu, Nepal. </p>
+          <br>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div id="map">
+            <span class="glyphicon glyphicon-map-marker"></span> Sankhamool, Kathmandu &nbsp;&nbsp;
+          </div>
+        </div> <!-- /.col-md-6 -->
+        <div class="col-md-6 col-sm-6">
+
+          <div class="row contact-form">
+
+            <fieldset class="col-md-12">
+              <input id="name" type="text" name="name" placeholder="Name">
+            </fieldset>
+            <fieldset class="col-md-12">
+              <input type="email" name="email" id="email" placeholder="Email">
+            </fieldset>
+            <fieldset class="col-md-12">
+              <input type="text" name="subject" id="subject" placeholder="Subject">
+            </fieldset>
+            <fieldset class="col-md-12">
+              <textarea name="comments" id="comments" placeholder="Message"></textarea>
+            </fieldset>
+            <fieldset class="col-md-12">
+              <input type="submit" name="send" value="Submit" id="submit" class="button">
+            </fieldset>
+
+          </div> <!-- /.contact-form -->
+
+        </div> <!-- /.col-md-6 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /#contact us -->
+</body>
+</html>
